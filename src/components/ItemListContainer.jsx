@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ItemListContainer() {
+function ItemListContainer({ejemplo}) {
     return (
-        <section>
-            <h2>Hola mundo.</h2>
+        <section className='bg-sectionColor bg-opacity-75 stroke-1 h-screen flex justify-center items-center'>
+            <h2 className='text-5xl text-black'>{ejemplo}</h2>
         </section>
     );
 }

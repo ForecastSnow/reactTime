@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Navbar from './components/Navbar'
+import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import './App.css'
 
@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <ItemListContainer />
+      <NavBar />
+      <ItemListContainer ejemplo='Hola mundo.' />
     </>
 
   )
