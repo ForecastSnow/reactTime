@@ -15,29 +15,29 @@ function NavBar() {
 
                 <ul className='flex justify-between mt-3 ml-1 '>
                     <li>
-                        <a className='text-black text-lg mr-4' href="">Tanques</a>
+                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Tanques</a>
                     </li>
                     <li>
-                        <a className='text-black text-lg mr-4' href="">Aviones</a>
+                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Aviones</a>
                     </li>
                     <li>
-                        <a className='text-black text-lg mr-4' href="">Ofertas</a>
+                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Ofertas</a>
                     </li>
                     <li>
-                        <a className='text-black text-lg ' href="">Contacto</a>
+                        <a className='text-black text-lg hover:text-gray-700' href="">Contacto</a>
                     </li>
                 </ul>
             </div>
 
             <div className="flex flex-col mr-28 mt-4 lg:mr-36 xl:mr-56 2xl:mr-64">
                 <div className='flex flex-row mb-4 mt-2' >
-                    <a className='text-black text-lg mr-7' href="">Crea tu cuenta</a>
-                    <a className='text-black text-lg mr-7' href=""> Ingresar</a>
+                    <a className='text-black text-lg hover:text-gray-700 mr-7' href="">Crea tu cuenta</a>
+                    <a className='text-black text-lg hover:text-gray-700 mr-7' href=""> Ingresar</a>
                     <CartWidget />
                 </div>
                 <div className='flex flex-row mt-4'>
-                    <a className='text-black text-lg mr-6' href="">Ayuda</a>
-                    <a className='text-black text-lg' href="">Vende tu articulo</a>
+                    <a className='text-black text-lg hover:text-gray-700 mr-6' href="">Ayuda</a>
+                    <a className='text-black text-lg hover:text-gray-700' href="">Vende tu articulo</a>
 
                 </div>
             </div>
