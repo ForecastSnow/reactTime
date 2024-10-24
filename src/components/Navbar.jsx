@@ -1,43 +1,44 @@
 import React from 'react';
 import CartWidget from './CartWidget.jsx'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
     return (
-        <nav className='bg-navBarColor bg-opacity-75 stroke-1 flex flex-row justify-between w-full h-40'>
+        <nav className='bg-navBarColor bg-opacity-75 stroke-1 flex flex-row justify-between w-scream h-40'>
 
             <div className="flex flex-col ml-28 mt-6 lg:ml-36 xl:ml-56 2xl:ml-64">
-                <div className='flex flex-row justify-between'>
+                <Link to='/reactTime/' className='flex flex-row justify-between'>
 
-                    <a className='w-20 ' href="/index.html"><img className='relative bottom-3' src="./src/assets/img/icono.png" alt="icono tienda" /></a>
+                    <img className=' w-20 relative bottom-3' src="./src/assets/img/icono.png" alt="icono tienda" />
                     <h1 className="font-bebas text-black text-4xl">Mercado Blindado</h1>
 
-                </div>
+                </Link>
 
                 <ul className='flex justify-between mt-3 ml-1 '>
                     <li>
-                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Tanques</a>
+                        <Link to='/reactTime/category/tanks' className='text-black text-lg hover:text-gray-700 mr-4' >Tanques</Link>
                     </li>
                     <li>
-                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Aviones</a>
+                        <Link to='/reactTime/category/planes' className='text-black text-lg hover:text-gray-700 mr-4' >Aviones</Link>
                     </li>
                     <li>
-                        <a className='text-black text-lg hover:text-gray-700 mr-4' href="">Ofertas</a>
+                        <Link to='/reactTime/category/offers' className='text-black text-lg hover:text-gray-700 mr-4' >Ofertas</Link>
                     </li>
                     <li>
-                        <a className='text-black text-lg hover:text-gray-700' href="">Contacto</a>
+                        <Link to='/reactTime/contact' className='text-black text-lg hover:text-gray-700' >Contacto</Link>
                     </li>
                 </ul>
             </div>
 
             <div className="flex flex-col mr-28 mt-4 lg:mr-36 xl:mr-56 2xl:mr-64">
                 <div className='flex flex-row mb-4 mt-2' >
-                    <a className='text-black text-lg hover:text-gray-700 mr-7' href="">Crea tu cuenta</a>
-                    <a className='text-black text-lg hover:text-gray-700 mr-7' href=""> Ingresar</a>
+                    <Link className='text-black text-lg hover:text-gray-700 mr-7' >Crea tu cuenta</Link>
+                    <Link className='text-black text-lg hover:text-gray-700 mr-7' > Ingresar</Link>
                     <CartWidget />
                 </div>
                 <div className='flex flex-row mt-4'>
-                    <a className='text-black text-lg hover:text-gray-700 mr-6' href="">Ayuda</a>
-                    <a className='text-black text-lg hover:text-gray-700' href="">Vende tu articulo</a>
+                    <Link className='text-black text-lg hover:text-gray-700 mr-6' >Ayuda</Link>
+                    <Link className='text-black text-lg hover:text-gray-700' >Vende tu articulo</Link>
 
                 </div>
             </div>
