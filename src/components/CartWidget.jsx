@@ -13,7 +13,7 @@ function CartWidget() {
                 <p className='text-xs'>{quantityItemsCart()}</p>
             </div>
 
-            <img className='w-10 ml-4' src="./src/assets/img/carrito.png" alt="icono de carrito" />
+            <img className='w-10 ml-4' src="./img/carrito.png" alt="icono de carrito" />
         </div>
 
     );

@@ -5,7 +5,7 @@ import ItemDetailConteiner from './components/ItemDetailConteiner'
 import HomeInfoNosotrosEnvios from './components/HomeInfoNosotrosEnvios'
 import Cart from './components/Cart'
 import Footer from './components/Footer'
-import DevelopingState from './components/developingState'
+import DevelopingState from './components/DevelopingState'
 import './App.css'
 
 /* react router */
