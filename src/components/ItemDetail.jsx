@@ -41,7 +41,7 @@ function ItemDetail({ item }) {
                 </div>
                 <div className='ml-[256px] mr-[256px] mb-10'>
 
-                <p className=' mt-3 mb-10 w-[500px] h-8 bg-gray-300 rounded animate-pulse '></p>
+                    <p className=' mt-3 mb-10 w-[500px] h-8 bg-gray-300 rounded animate-pulse '></p>
                     <p className=' mt-3 h-4 bg-gray-300 rounded animate-pulse '></p>
                     <p className=' mt-3 h-4 bg-gray-300 rounded animate-pulse '></p>
                     <p className=' mt-3 h-4 bg-gray-300 rounded animate-pulse '></p>
@@ -66,7 +66,11 @@ function ItemDetail({ item }) {
                 <div className='w-1/3 h-[540px] shadow-md bg-cyan-100 border border-black rounded-xl'>
                     <p className='text-black text-5xl whitespace-nowrap mb-14 mt-12'>{item.nombre}</p>
 
-                    <p className='text-black text-4xl mt-10'>Precio: ${item.precio}</p>
+
+
+                    <del className='text-red-500 text-4xl mt-10'>Precio: ${item.precio}</del>
+
+                    {item.precioDescuento !== undefined && <p className='text-green-700 text-4xl mt-10'>Descuento: ${item.precioDescuento}</p>}
 
                     <div className='flex items-center justify-center mt-16'>
 

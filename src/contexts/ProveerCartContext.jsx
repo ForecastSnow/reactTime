@@ -32,7 +32,12 @@ const ProveerCartContext = ({ children }) => {
 
     const quantityItemsCart = () => { return cart.reduce((total, item) => total + item.quantityOnCart, 0) }
 
-    const cartValue = () => {return cart.reduce ((total, item) => total + (item.precio * item.quantityOnCart), 0)}
+    const cartValue = () => {
+        return cart.reduce((total, item) => {
+            const price = item.precioDescuento !== undefined ? item.precioDescuento : item.precio;
+            return total + (price * item.quantityOnCart);
+        }, 0);
+    };
 
     return (<CartContext.Provider value={{ cart, itemCartAdd, itemCartRemove, changeCountItemCart, clearCart, quantityItemsCart, cartValue }}>
 

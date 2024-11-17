@@ -4,7 +4,7 @@ import { CartContext } from '../contexts/cartContext';
 
 function CheckoutForm() {
 
-    const { cart } = useContext(CartContext);
+    const { cart, clearCart } = useContext(CartContext);
 
 
     const [formData, setFormData] = useState({
@@ -28,6 +28,7 @@ function CheckoutForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         registroCompras({ cart, formData })
+        clearCart()
     };
 
     return (
