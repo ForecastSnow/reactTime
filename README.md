@@ -28,23 +28,18 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
 
 1️⃣ Clonar el repositorio
 
-bash
-
-git clone https://github.com/ForecastSnow/reactTime.git
+bash -- git clone https://github.com/ForecastSnow/reactTime.git
 
 2️⃣ Instalar dependencias
 
 Ejecuta el siguiente comando para instalar las bibliotecas necesarias:
 
-bash
-Copiar código
-npm install
+bash -- npm install
 
 3️⃣ Iniciar el servidor de desarrollo
 
-Arranca el proyecto con el siguiente comando:
+Arranca el proyecto en dev con el siguiente comando:
 
-bash
-Copiar código
-npm run dev
-Luego, abre http://localhost:5173 en tu navegador para ver la aplicación en acción.
+bash  -- npm run dev
+
+Luego, abre el enlace proporcionado.
