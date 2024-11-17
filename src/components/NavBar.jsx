@@ -9,7 +9,7 @@ function NavBar() {
             <div className="flex flex-col ml-28 mt-6 lg:ml-36 xl:ml-56 2xl:ml-64">
                 <Link to='/' className='flex flex-row justify-between'>
 
-                    <img className=' w-20 relative bottom-3' src="./src/assets/img/icono.png" alt="icono tienda" />
+                    <img className=' w-20 relative bottom-3' src="./img/icono.png" alt="icono tienda" />
                     <h1 className="font-bebas text-black text-4xl">Mercado Blindado</h1>
 
                 </Link>
