@@ -1,4 +1,4 @@
-import { products } from '../assets/data/products'
+import { querySnapshot } from "../fireBase/db"
 import { useEffect, useState } from 'react'
 import HomeTankGaleryCarousel  from './HomeTankGaleryCarousel'
 
@@ -7,7 +7,7 @@ function HomeTankGaleryConteiner() {
 
     const [randomsItems, setRandomsItems] = useState([]);
 
-    const getProducts = () => new Promise((res) => { setTimeout(() => { res(products) }, 320) });
+    const getProducts = () => new Promise((res) => {res(querySnapshot.docs.map(doc => ({id: doc.id,...doc.data()})))});
 
     useEffect(() => {
         getProducts().then(res => {

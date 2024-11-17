@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { products } from '../assets/data/products'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import { querySnapshot } from "../fireBase/db"
 
 
 function ItemListContainer() {
@@ -11,7 +11,7 @@ function ItemListContainer() {
 
     const { category } = useParams();
 
-    const getProducts = () => new Promise((res) => { setTimeout(() => { res(products) }, 300) });
+    const getProducts = () => new Promise((res) => {res(querySnapshot.docs.map(doc => ({id: doc.id,...doc.data()})))});
 
 
     useEffect(() => {
@@ -29,12 +29,15 @@ function ItemListContainer() {
             return;
         }
         if (category == 'offers') {
-            getProducts().then(res => setItems(res.filter(item => item.descuento == 1)));
+            getProducts().then(res => setItems(res.filter(item => item.descuento == true)));
             return;
         }
 
 
     }, [category]);
+
+
+
 
 
     return (

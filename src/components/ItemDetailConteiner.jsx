@@ -1,26 +1,31 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../assets/data/products";
 import ItemDetail from './ItemDetail';
+import { getProductById } from '../fireBase/db'
 
 function DetailItemConteiner() {
 
 
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState(Object);
 
-    const {idSelected} = useParams()
+    const { idSelected } = useParams()
 
-    const getProducts = () => new Promise((res) => { setTimeout(() => { res(products) }, 300) });
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const fetchedItem = await getProductById(idSelected); 
+            setItem(fetchedItem); 
+        };
 
-    useEffect(() => {getProducts().then(res => setItem(res.find(item => item.id == parseInt(idSelected))));
+        fetchProduct();
 
-    },[idSelected]);
+    }, [idSelected]);
+
 
 
     return (
         <>
-        
-        <ItemDetail item={item}/>
+
+            <ItemDetail item={item} />
 
         </>
     )
