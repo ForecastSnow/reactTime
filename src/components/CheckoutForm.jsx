@@ -1,10 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { registroCompras } from "../fireBase/db"
 import { CartContext } from '../contexts/cartContext';
+import { useNavigate } from 'react-router-dom';
 
 function CheckoutForm() {
 
     const { cart, clearCart } = useContext(CartContext);
+
+    const navigate = useNavigate();
 
 
     const [formData, setFormData] = useState({
@@ -29,6 +32,7 @@ function CheckoutForm() {
         e.preventDefault();
         registroCompras({ cart, formData })
         clearCart()
+        navigate("/CompraExitosa")
     };
 
     return (

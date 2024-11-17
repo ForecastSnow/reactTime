@@ -6,6 +6,7 @@ import HomeInfoNosotrosEnvios from './components/HomeInfoNosotrosEnvios'
 import Cart from './components/Cart'
 import Footer from './components/Footer'
 import DevelopingState from './components/DevelopingState'
+import CompraRealizada from './components/CompraRealizada'
 import './App.css'
 
 /* react router */
@@ -38,6 +39,8 @@ function App() {
         <Route path='/cart' element={<Cart />} />
 
         <Route path='/developingState' element={<DevelopingState/>} />
+        
+        <Route path='/CompraExitosa' element={<CompraRealizada/>} />
 
       </Routes>
 
