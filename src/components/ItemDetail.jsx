@@ -68,9 +68,9 @@ function ItemDetail({ item }) {
 
 
 
-                    <del className='text-red-500 text-4xl mt-10'>Precio: ${item.precio}</del>
+                    {item.precioDescuento == undefined && <p className='text-black text-4xl mt-10'>Precio: ${item.precio}</p>}
 
-                    {item.precioDescuento !== undefined && <p className='text-green-700 text-4xl mt-10'>Descuento: ${item.precioDescuento}</p>}
+                    {item.precioDescuento !== undefined && <><del className='text-red-500 text-4xl mt-10'>Precio: ${item.precio}</del><p className='text-green-700 text-4xl mt-10'>Descuento: ${item.precioDescuento}</p></>}
 
                     <div className='flex items-center justify-center mt-16'>
 
